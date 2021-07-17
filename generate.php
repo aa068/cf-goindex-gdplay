@@ -5,7 +5,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Generator CFPlayer</title>
+	<title>Generator CF-Player</title>
 	<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" type="text/css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
@@ -18,13 +18,13 @@
 <body>
 	<div class="container bg-dark">
 		<div class="jumbotron mt-3">
-	        <h1 class="display-6">Generate Video Player</h1>
-	        <p class="lead">Encode URL to protect your real URL. You can use url or iframe after encoding into your website easily and quickly.</p>
+	        <h1 class="display-6">GOINDEX 播放器</h1>
+	        <p class="lead">將您的GOINDEX網址加密後使用JWPLAYER播放</p>
 	     </div>
 	     
 		<form id="action-form" action="action.php" method="POST" accept-charset="utf-8">
 			<div class="form-group">
-				<label class="font-weight-bold text-white">Video URL</label>
+				<label class="font-weight-bold text-white">影片網址</label>
 				<input type="text" name="link" class="form-control" placeholder="" onclick="this.select()" required>
 			</div>
 
@@ -35,15 +35,15 @@
 						<div class="row">
 						    <div class="col-md-7">
 						        <div class="form-group">
-						        	<label class="font-weight-bold text-white">Subtitle</label>
+						        	<label class="font-weight-bold text-white">字幕網址【選填】</label>
 						        	<input type="text" class="form-control" name="sub[0]" placeholder="https://yourdomain/subtitle.srt" onclick="this.select()"> 
 						        </div>
 						    </div>
 						    
 						    <div class="col-md-4">
 						        <div class="form-group">
-						        	<label class="font-weight-bold text-white">Label</label>
-						        	<input type="text" class="form-control" name="label[0]" placeholder="Ex: Default" onclick="this.select()"> 
+						        	<label class="font-weight-bold text-white">字幕名稱【字幕網址沒填寫不用填】</label>
+						        	<input type="text" class="form-control" name="label[0]" placeholder="例如:繁中字幕,CHT等" onclick="this.select()"> 
 						        </div>
 						    </div>
 						    
@@ -63,12 +63,12 @@
 			</div>
 
 			<div class="form-group">
-				<label class="font-weight-bold text-white">Poster</label>
+				<label class="font-weight-bold text-white">影片圖片網址【選填】</label>
 				<input type="text" name="poster" class="form-control" placeholder="https://yourdomain/poster.jpg" onclick="this.select()">
 			</div>
 
 			<div class="form-group">
-				<button type="submit" id="action-submit" class="btn btn-lg btn-info btn-block"> <span id="fa-loading"><i class="fa fa-retweet"></i></span> Encode</button>
+				<button type="submit" id="action-submit" class="btn btn-lg btn-info btn-block"> <span id="fa-loading"><i class="fa fa-retweet"></i></span> 轉碼</button>
 			</div>
 		</form>
 		
@@ -81,7 +81,7 @@
 			<label class="font-weight-bold text-white">Iframe Encoding</label>
 			<textarea rows="5" class="form-control" id="iframe-encode" placeholder="" onclick="this.select()" readonly></textarea>
 		</div>
-		<?php  $domainServer = (isset($_SERVER['HTTPS']) ? "http" : "https") . "://" . $_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']); ?>
+		<?php  $domainServer = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://" . $_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']); ?>
 		<script type="text/javascript">
 			jQuery(function ($) {
 				$('#action-form').submit(function(e) {
@@ -113,7 +113,7 @@
 		<hr>
 	</div>
 	<footer class="footer">
-		<p class="text-center text-white">Copyleft &copy; <?php echo date('Y') ?> <a href="https://t.me/kiprox" title="CFPlayer" target="_blank">CFPlayer</a>. All rights reserved.</p>
+		<p class="text-center text-white">Copyleft &copy; <?php echo date('Y') ?> CF-Player. All rights reserved.</p>
 	</footer>
 </body>
 </html>
