@@ -58,8 +58,8 @@ if ($data != '') {
 					primary: "html5",
 					autostart: false,
 					preload: "auto",
-					aboutlink: "https://fb.com/delta.web.id",
-					abouttext: "CFPlayer",
+					aboutlink: "https://你的網址",
+					abouttext: 你的名稱",
 					image: "'.$poster.'",
 					captions: {
 						color: "#f3f368",
